@@ -1,5 +1,9 @@
-import { createContext, useState } from 'react';
+import { createContext, useState } from "react";
 
+const languageToEmoji = {
+  "en" : "🇬🇧",
+  "pl" : "🇵🇱",
+};
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ dictionary, defaultLanguage, children }) => {
@@ -16,7 +20,13 @@ export const LanguageProvider = ({ dictionary, defaultLanguage, children }) => {
   };
   return (
     <LanguageContext.Provider
-      value={{ selectedLanguage, languages, t, setSelectedLanguage }}
+      value={{
+        selectedLanguage,
+        languages,
+        t,
+        setSelectedLanguage,
+        languageToEmoji,
+      }}
     >
       {children}
     </LanguageContext.Provider>

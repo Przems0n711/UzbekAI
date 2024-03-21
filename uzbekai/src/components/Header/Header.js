@@ -4,7 +4,7 @@ import { useContext } from "react";
 import LanguageContext from "../../contexts/LanguageContext";
 
 const Header = () => {
-   const { selectedLanguage, languages, setSelectedLanguage, t } =
+   const { selectedLanguage, languages, setSelectedLanguage, t, languageToEmoji } =
     useContext(LanguageContext);
 
   return (
@@ -15,7 +15,7 @@ const Header = () => {
       <div className="languages">
         {languages.map((l) => (
             <li className={`language  ${l === selectedLanguage ? 'selected' : ''}`}>
-            <button onClick={() => setSelectedLanguage(l)}>{l}</button>
+            <button onClick={() => setSelectedLanguage(l)}>{languageToEmoji[l]}</button>
             </li>
         ))}
       </div>
