@@ -1,0 +1,7 @@
+{
+  "header": "Hello world",
+  "card-button": "count is",
+  "card-paragraph-edit": "Edit",
+  "card-paragraph-rest": "and save to HMR test",
+  "footer-paragraph": "Click on the Vite and React logos to learn more"
+}

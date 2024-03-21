@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { useContext } from 'react';
+import LanguageContext from './contexts/LanguageContext';
 
 function App() {
+
+  const { selectedLanguage, languages, setSelectedLanguage, t } =
+    useContext(LanguageContext);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {languages.map((l) => (
+        <li className={l === selectedLanguage ? 'selected' : ''}>
+          <button onClick={() => setSelectedLanguage(l)}>{l}</button>
+        </li>
+      ))}
+
+      <h1>{t('header')}</h1>
     </div>
   );
 }
