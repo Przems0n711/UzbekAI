@@ -7,12 +7,12 @@ const Header = () => {
   const { t } = useContext(LanguageContext);
 
   return (
-    <dib className="body">
-      <form className="form">
+    <div className="body">
+      <form className="form" action="#">
         <input placeholder={t("search")} className="input" />
         <input className="input submit" type="submit" value="->" />
       </form>
-    </dib>
+    </div>
   );
 };
 
