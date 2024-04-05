@@ -1,32 +1,30 @@
 import "./Body.scss";
-import React, { useState } from "react";
-import axios from "axios";
-import { useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 import LanguageContext from "../../contexts/LanguageContext";
+import OpenAI from "openai";
 
 const Header = () => {
   const { t } = useContext(LanguageContext);
-  const [response, setResponse] = useState("");
+  const [response, setResponse] = useState([]);
+  const inputRef = useRef();
 
+  const openai = new OpenAI({
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+    dangerouslyAllowBrowser: true,
+  });
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const userInput = event.target.elements.userInput.value;
+    const userInput = inputRef.current.value;
 
     try {
-      const response = await axios.post(
-        "https://api.openai.com/v1/completions",
-        { prompt: userInput },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer api_key",
-          },
-        }
-      );
+      const chatCompletion = await openai.chat.completions.create({
+        model: "gpt-3.5-turbo",
+        messages: [{ role: "user", content: userInput }],
+      });
 
-      setResponse(response.data.choices[0].text);
-    } catch (error) {
-      console.error("Error fetching response from API:", error);
+      setResponse([...response, chatCompletion.choices[0].message]);
+    } catch (e) {
+      console.log(e);
     }
   };
 
@@ -37,15 +35,16 @@ const Header = () => {
           name="userInput"
           placeholder={t("search")}
           className="input"
+          ref={inputRef}
           required
         />
         <button type="submit" className="input submit">
           {"->"}
         </button>
       </form>
-      {response && (
+      {response.length > 0 && (
         <div className="response">
-          <strong>AI Response:</strong> {response}
+          <strong>AI Response:</strong> {response[0].content}
         </div>
       )}
     </div>

@@ -25,15 +25,8 @@ const Weather = () => {
             appid: api_key,
           },
         })
-        .then((res) => {
-          console.log("res", res);
-          setWeather({ data: res.data, loading: false, error: false });
-        })
-        .catch((error) => {
-          setWeather({ ...weather, data: {}, error: true });
-
-          console.log("error", error);
-        });
+        .then((res) => setWeather({ data: res.data, loading: false, error: false }))
+        .catch(() => setWeather({ ...weather, data: {}, error: true }));
     };
     searchWeather();
   }, []);

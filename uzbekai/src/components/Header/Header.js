@@ -13,8 +13,8 @@ const Header = () => {
 
 
       <div className="languages">
-        {languages.map((l) => (
-            <li className={`language  ${l === selectedLanguage ? 'selected' : ''}`}>
+        {languages.map((l, index) => (
+            <li className={`language  ${l === selectedLanguage ? 'selected' : ''}`} key={index}>
             <button onClick={() => setSelectedLanguage(l)}>{languageToEmoji[l]}</button>
             </li>
         ))}
