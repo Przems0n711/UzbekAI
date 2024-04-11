@@ -50,7 +50,7 @@ const Header = () => {
         </div>
         )}
         <button type="submit" className="input submit">
-          {"Submit"}
+          {t("submit")}
         </button>
       </form>
     </div>
