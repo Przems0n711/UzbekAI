@@ -1,8 +1,6 @@
-// Define variables for reusable values
 $primary-color: #007bff;
 $box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
-// Define keyframe animation for fadeIn
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -23,7 +21,7 @@ $box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   .form {
     width: 100%;
     display: flex;
-    flex-direction: column; // Adjusted to column layout
+    flex-direction: column;
     align-items: center;
     max-width: 400px;
     padding: 16px;
@@ -31,7 +29,7 @@ $box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     border-radius: 4px;
     box-shadow: $box-shadow;
     gap: 5px;
-    animation: fadeIn 0.5s ease; // Added fadeIn animation
+    animation: fadeIn 0.5s ease;
 
     .input {
       width: 100%;
@@ -40,10 +38,10 @@ $box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       border: 1px solid #ddd;
       border-radius: 4px;
       font-size: 16px;
-      transition: border-color 0.3s ease; // Added transition effect
+      transition: border-color 0.3s ease;
 
       &:focus {
-        border-color: $primary-color; // Change border color on focus
+        border-color: $primary-color;
       }
     }
 
@@ -56,14 +54,11 @@ $box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       font-size: 16px;
       font-weight: 400;
       cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease; // Added transition effects
+      transition: background-color 0.3s ease, transform 0.3s ease;
 
       &:hover {
-        background-color: darken(
-          $primary-color,
-          10%
-        ); // Darken the color on hover
-        transform: translateY(-2px); // Move button slightly up on hover
+        background-color: darken($primary-color, 10%);
+        transform: translateY(-2px);
       }
     }
   }

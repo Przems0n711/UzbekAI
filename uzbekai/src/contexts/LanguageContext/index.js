@@ -3,6 +3,7 @@ import { createContext, useState } from "react";
 const languageToEmoji = {
   "en" : "🇬🇧",
   "pl" : "🇵🇱",
+  "uz" : "🇺🇿"
 };
 const LanguageContext = createContext();
 

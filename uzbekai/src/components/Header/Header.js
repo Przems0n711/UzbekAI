@@ -11,7 +11,6 @@ const Header = () => {
     <header>
       <h1>{t("header")} UzbekAI</h1>
 
-
       <div className="languages">
         {languages.map((l, index) => (
             <li className={`language  ${l === selectedLanguage ? 'selected' : ''}`} key={index}>
