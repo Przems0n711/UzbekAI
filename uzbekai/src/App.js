@@ -6,8 +6,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Body />
-      <Weather />
+      <div className="jebac_przemka">
+        <Body />
+        <Weather />
+      </div>
     </div>
   );
 }

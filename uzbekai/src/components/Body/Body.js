@@ -38,15 +38,21 @@ const Header = () => {
           ref={inputRef}
           required
         />
+        {response.length > 0 && (
+        <div className="response">
+          {response.map((resp, index) => {
+            return (
+              <div key={index} className="response_message">
+                {resp}
+              </div>
+            );
+          })}
+        </div>
+        )}
         <button type="submit" className="input submit">
-          {"->"}
+          {"Submit"}
         </button>
       </form>
-      {response.length > 0 && (
-        <div className="response">
-          <strong>AI Response:</strong> {response[0].content}
-        </div>
-      )}
     </div>
   );
 };
