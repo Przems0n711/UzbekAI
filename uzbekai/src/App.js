@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="jebac_przemka">
+      <div className="sigma">
         <Body />
         <Weather />
       </div>
