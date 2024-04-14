@@ -1,0 +1,45 @@
+/* city-name styles */
+.city-name {
+    text-align: center; /* Center city name horizontally */
+    margin-bottom: 1rem; /* Add some spacing below the city name */
+  }
+  
+  .city-name h2 {
+    font-size: 2rem; /* Set a larger font size for the city name */
+    margin: 0; /* Remove default margins */
+  }
+  
+  /* icon-temp styles */
+  .icon-temp {
+    display: flex; /* Allow alignment of icon and temperature */
+    align-items: center; /* Align vertically */
+    margin-bottom: 1rem; /* Add spacing below the temperature */
+  }
+  
+  .icon-temp img {
+    width: 80px; /* Set a consistent width for the weather icon */
+    height: 80px; /* Match the width for a square icon */
+    margin-right: 1rem; /* Add spacing between icon and temperature */
+  }
+  
+  .icon-temp p {
+    font-size: 1.2rem; /* Set a clear font size for temperature and description */
+    margin: 0; /* Remove default margins */
+  }
+  
+  .deg {
+    font-size: 0.8rem; /* Adjust degree symbol size for better scaling */
+    position: relative; /* Position the degree symbol slightly above the number */
+    top: -0.2rem; /* Fine-tune the vertical positioning */
+  }
+  
+  /* des-wind styles */
+  .des-wind {
+    text-align: center; /* Center description and wind speed text */
+  }
+  
+  .des-wind p:first-child {
+    font-weight: bold; /* Make the description text bolder */
+    text-transform: uppercase; /* Maintain uppercase for description */
+  }
+  

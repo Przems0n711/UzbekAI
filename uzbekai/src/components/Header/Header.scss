@@ -1,12 +1,15 @@
 header {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0;
   overflow: hidden;
   padding: 16px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   perspective: 1000px;
-
+  
   &:before {
     content: "";
     position: absolute;

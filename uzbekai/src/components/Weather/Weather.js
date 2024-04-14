@@ -54,7 +54,7 @@ const Weather = () => {
         <div>
           <div className="city-name">
             <h2>
-              {weather.data.name}, <span>{weather.data.sys.country}</span>
+              {weather.data.name}
             </h2>
           </div>
           <div className="icon-temp">
