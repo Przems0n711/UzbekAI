@@ -1,11 +1,13 @@
 import "./Weather.scss";
 import { Oval } from "react-loader-spinner";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFrown } from "@fortawesome/free-solid-svg-icons";
+import LanguageContext from "../../contexts/LanguageContext";
 
 const Weather = () => {
+  const { t } = useContext(LanguageContext);
   const [weather, setWeather] = useState({
     loading: false,
     data: {},
@@ -67,8 +69,10 @@ const Weather = () => {
             <sup className="deg">°C</sup>
           </div>
           <div className="des-wind">
-            <p>{weather.data.weather[0].description.toUpperCase()}</p>
-            <p>Wind Speed: {weather.data.wind.speed}m/s</p>
+            {/* <p>{weather.data.weather[0].description.toUpperCase()}</p>
+            */} <p>{t("few_clouds").toUpperCase()}</p>
+            
+            <p>{t("wind_speed")}: {weather.data.wind.speed}m/s</p>
           </div>
         </div>
       )}

@@ -1,5 +1,8 @@
 {
   "header": "Witaj w",
   "search": "Szukaj...",
-  "send": "Wyślij"
+  "send": "Wyślij",
+  "first_ai_message": "Witaj! W czym mogę pomóc?",
+  "wind_speed": "Prędkość Wiatru",
+  "few_clouds": "Lekkie zachmurzenie"
 }

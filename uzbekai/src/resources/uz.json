@@ -1,5 +1,8 @@
 {
   "header": "Ga Xush kelibsiz",
   "search" : "Qidirmoq...",
-  "send": "Yuborish"
+  "send": "Yuborish",
+  "first_ai_message": "Salom! Bugun sizga qanday yordam bera olaman?",
+  "wind_speed": "Shamol Tezligi",
+  "few_clouds": "kam bulutlar"
 }

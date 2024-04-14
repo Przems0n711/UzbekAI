@@ -1,5 +1,8 @@
 {
   "header": "Welcome to",
   "search" : "Search...",
-  "send": "Send"
+  "send": "Send",
+  "first_ai_message": "Hello! How can I help you today?",
+  "wind_speed": "Wind speed",
+  "few_clouds": "few clouds"
 }

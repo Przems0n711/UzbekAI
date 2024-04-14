@@ -6,7 +6,7 @@ import OpenAI from "openai";
 const Header = () => {
   const { t } = useContext(LanguageContext);
   const [chatMessages, setChatMessages] = useState([
-    {role: 'assistant', content: 'Hello! How can I assist you today?'}]);
+    {role: 'assistant', content: t("first_ai_message")}]);
   const [waitingForResponse, setWaitingForResponse] = useState(false);
     const inputRef = useRef();
   const chatRef = useRef(null);
@@ -52,7 +52,7 @@ const Header = () => {
           </div>
         ))}
         {waitingForResponse  && (
-          <div className="assistant typing-indicator">
+          <div className="typing-indicator">
             <span></span>
             <span></span>
             <span></span>
