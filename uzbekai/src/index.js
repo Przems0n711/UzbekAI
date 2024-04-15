@@ -16,7 +16,7 @@ root.render(
         pl,
         uz,
       }}
-      defaultLanguage={"uz"}
+      defaultLanguage={"en"}
     >
       <App />
     </LanguageProvider>
