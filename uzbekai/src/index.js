@@ -7,6 +7,7 @@ import { LanguageProvider } from "./contexts/LanguageContext/index.js";
 import pl from "./resources/pl.json";
 import en from "./resources/en.json";
 import uz from "./resources/uz.json"
+import ru from "./resources/ru.json"
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ root.render(
       dictionary={{
         en,
         pl,
+        ru,
         uz,
       }}
       defaultLanguage={"en"}

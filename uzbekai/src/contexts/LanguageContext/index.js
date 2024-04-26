@@ -4,6 +4,7 @@ const languageToEmoji = {
   "en" : "🇬🇧",
   "uz" : "🇺🇿",
   "pl" : "🇵🇱",
+   "ru" : "🇷🇺",
 };
 const LanguageContext = createContext();
 
